@@ -16,7 +16,10 @@ let productos =[
         precio: 110,
     }
 ]
-const busqueda = productos.filter( producto => producto.precio > 180);
+const productosPrecio = productos.map( (producto) => {return producto.precio})
+console.log(productosPrecio);
+
+const busqueda = productosPrecio.sort( (a, b) => a-b);
 console.log (busqueda);
 
 

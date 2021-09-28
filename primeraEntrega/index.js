@@ -17,7 +17,6 @@ let clientes =[
         telefono: 2616543487,
     }
 ]
-console.log(clientes)
 let cliente1 = prompt ("Ingrese su nombre")
 alert("Hola " + cliente1+ " nos alegra que te hayas comunicado con nosotros!!!" )
 let nuevoCliente=prompt("Quieres ser cliente de FRUTTI GO?. si/no")
@@ -29,14 +28,16 @@ clientes.push({
 })
 }else{
     alert("Gracias! Que tengas un gran día!!!")
-
+    
 }
-let seccion = prompt("quieres ingreasr al nuestra seccion de frutas y verduras? si/no")
+let seccion = prompt("quieres ingresar a nuestra seccion de frutas y verduras? si/no")
 if (seccion== "si"){
     alert("Ya estas en nuestra base de datos!! ingresa tus productos al carrito y te lo llevo a tu casa!")
-
+    
 }else{
     alert("Gracias! Que tengas un gran día!!!")
 }
+
+console.log(clientes)
 
 

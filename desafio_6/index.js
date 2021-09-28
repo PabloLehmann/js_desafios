@@ -31,3 +31,9 @@ clientes.push({
 console.log(clientes)
 
 
+const busqueda = clientes.filter( cliente => cliente.nombre === "Laura Lola");
+console.log (busqueda);
+
+const clientesMapeo = clientes.map( (cliente) => {return cliente.direccion})
+console.log(clientesMapeo);
+
