@@ -21,8 +21,23 @@ for(let li of listaMercaderia){
 }
 
 //////////////////////////////////////////////////////////////
+let frutas= ["banana", "manzana", "pera", "naranja", "mandarina"];
 
 let miGanancia = document.getElementById("ganancia")
+const select = document.getElementById('fruta')
+
+frutas.forEach( (fruta) => {
+    const option = document.createElement('option')
+    option.value = fruta
+    option.innerHTML = fruta
+
+    select.appendChild(option)
+})
+
+
+
+////////////////////////////////////////////////////////////
+
 miGanancia.addEventListener("submit", agregarGanancia)
 
 function agregarGanancia(a){
@@ -31,13 +46,13 @@ a.preventDefault();
 
 let ganancias = a.target
 
-console.log(ganancias.children[0].value); 
-console.log(ganancias.children[1].value);  
+console.log(ganancias.children[1].value); 
+console.log(ganancias.children[2].value);  
 
-let valor = ganancias.children[0].value;
-let kilo = ganancias.children[1].value;
+let valor = ganancias.children[1].value;
+let kilo = ganancias.children[2].value;
 let precioFinal = ((valor * 1.50)/kilo);
-console.log( "Tu precio al publico es: $" + precioFinal);
+console.log( "Tu precio al publico es: $" + precioFinal );
 
 if (precioFinal>0){
 let tuPrecio = document.getElementsByTagName('h3')[2]
@@ -45,3 +60,30 @@ tuPrecio.textContent = "Tu precio al publico es: $" + precioFinal
 
 }
 }
+////////////////////////////////////////////////
+let miLista = document.getElementById('listaDeClientes')
+miLista.addEventListener("submit", agregarCliente)
+
+function agregarCliente(b){
+  b.preventDefault();
+  let lista = b.target
+}
+let clientes =[
+  {
+      nombre: "Irma Gonzalez",
+      direccion:"La cunas 1243",
+      telefono: 2614337685,
+  },
+  
+]
+console.log(clientes)
+
+clientes.push({
+  nombre: lista.children[0].value,
+  apellido: lista.children[1].value,
+  direccion: lista.children[2].value,
+  telefono: lista.children[3].value,
+})
+let nuevoC = document.getElementsByTagName('h3')[3]
+nuevoC.textContent = clientes
+console.log(clientes)
