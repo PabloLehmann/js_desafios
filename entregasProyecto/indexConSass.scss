@@ -1,0 +1,277 @@
+$colorFrutas: #eec4b157;
+$colorVerduras: #b0f2c26b;
+$colorVarios: #fbda704d;
+$colorLista:#f5eaa881;
+$ancho:500px;
+@mixin fuente-Y-Peso($f, $p) {
+    font-family: $f;
+    font-size: $p;
+
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+header{
+    
+    background-image:url(assets/header.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position:bottom;
+    display: flex;
+    justify-content:flex-end;
+
+    nav li{
+        
+        font-style:italic;
+        margin-inline-end: 3px;
+        padding: 1px 1px;
+        border-radius: 5px;
+        transition: 1s;
+        margin-top: 10%;
+        
+    }
+    nav li:hover{
+        background-color: rgb(219, 218, 218);
+    }
+}
+
+
+
+section{
+    background-color: white;
+    article{
+        text-align:center;
+        h2{
+            color: black;
+            @include fuente-Y-Peso('Akaya Kanadaka', 3.75rem );
+        }
+        li{
+            color:black;
+        }
+    }
+
+}
+
+aside{
+    background-color: #5ef8174d;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    
+    li{
+        @include fuente-Y-Peso('Akaya Kanadaka', 1.2rem );
+        color:black;
+    }
+    p{
+        @include fuente-Y-Peso('Adamina', large );
+        text-align: center;
+        color:black;
+    }
+    iframe{
+        margin-top: 1px;
+    }
+}
+
+footer{
+    background-image: linear-gradient(to top, black,rgb(14, 13, 13), rgb(75, 74, 74));
+    display: flex;
+    justify-content:space-evenly;
+    
+    h4{
+        font-family: 'Andamina', serif;
+        border: solid 2px white;
+        border-radius: 10px;
+        padding: 2px 2px;
+        margin-top: 50px;
+        color: white;
+        height: min-content;
+    }
+}
+.extra{
+    color: darkgoldenrod;
+    font-size: 3.1rem;
+}
+.ofertaDelDia__mercaderia{
+    background-color: #5ef8174d;
+    border: solid 2px white;
+    padding: 2px 18px;
+    border-radius: 1px;
+    font-family: 'Akaya Kanadaka', cursive;
+    
+}
+
+.ofertaDelDia__mercaderia--textAlign{
+    list-style-type: none;
+    text-align:left;
+    font-size: 1.9rem;
+
+    
+}
+.receta__titulo--color{
+    @include fuente-Y-Peso('Akaya Kanadaka', 3.1rem );
+    color:black;
+}
+
+.caption{
+    color: rgb(0, 0, 0);
+    @include fuente-Y-Peso('Akaya Kanadaka', 2.5rem );
+}
+.cardDeMercaderia{
+    display: flex;
+    justify-content: space-around;
+}
+.card:hover{
+    background-color: #5ef8174d;
+}
+.seccionLista__tablaCompra--fontStyle{
+    font-style: oblique;
+}
+.seccionFrutas__backgraund--color{
+    background-color: $colorFrutas;
+    border:solid 1px $colorFrutas+20;
+    height: auto;
+}
+.seccionVerdura__backgraund--color{
+    background-color:$colorVerduras;
+    border: solid 1px (($colorVerduras/2)-50);
+    height: auto;
+}
+.seccionVarios__backgraund--color{
+    background-color:$colorVarios;
+    border: solid 1px ($colorVarios+20);
+    height: auto;
+}
+.seccionLista__backgraund--color{
+    background-color: $colorLista;
+    border: solid 1px $colorLista+$colorFrutas;
+    height: auto;
+}
+.border{
+    border: 2px solid rgb(7, 7, 7);
+}
+.aside__receta--border{
+    border: 1px solid white;
+}
+.header__logo{
+     margin-right: 9rem;
+     margin-top: 0.3rem;
+}
+.header__logo:hover{
+    transform:rotateZ(360deg);
+    transition: 2s;
+}
+.formulario{
+    margin: 1rem;
+    
+}
+.formulario--margen{
+    margin: 0.5rem;
+    margin-bottom: 1px;
+}
+#tabla{
+    display: flex;
+    justify-content: center;
+}
+#carousel{
+    width: 260px;
+    height: 215px;
+}
+
+#gridsEnSection{
+    display: grid;
+    grid-template-areas: 
+    "oferta verdura"
+    "oferta fruta"
+    "oferta varios";
+    grid-template-columns: 25% 75%;
+    grid-template-rows: 33% 33% auto;
+}
+article#verduras{
+grid-area: verdura;
+}
+article#frutas{
+    grid-area: fruta;
+}
+article#varios{
+    grid-area: varios;
+}
+article#oferta{
+    grid-area: oferta;
+}
+.gridsEnBody{
+    display: grid;
+    grid-template-areas:
+    "header header"
+    "section aside"
+    "footer footer";
+    grid-template-columns: 80% auto;
+    grid-template-rows: 150px 69% auto ;
+}
+header{
+    grid-area: header;
+}
+section{
+    grid-area: section;
+}
+aside{
+    grid-area: aside;
+}
+footer{
+    grid-area: footer;
+}
+@media only screen and(max-width: $ancho){
+    .gridsEnBody{
+        display: flex;
+        flex-direction: column;
+    }
+    #gridsEnSection{
+        display: flex;
+        flex-direction: column;
+    }
+    .header__logo{
+        margin-right: 15%;
+    }
+    .cardDeMercaderia{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        
+        
+    }
+}
+@media only screen and(min-width: 501px)and(max-width: 960px) {
+    .gridsEnBody{
+        display: flex;
+        flex-direction: column;
+    }
+    #gridsEnSection{
+        display: flex;
+        flex-direction:column;
+    }
+    .header__logo{
+        margin-right: 20%;
+    }
+    
+}
+.errorDePagina{
+   margin-top: 20%;
+   margin-left: 40%;
+   
+}
+.fondo__Error--color{
+    background-color: rgba(255, 0, 0, 0.698);
+
+}
+
+
+tr>th{
+    padding: 7px;
+    border: 2px solid black;
+}
+ 

@@ -1,0 +1,373 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-image: url(assets/header.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+header nav li {
+  font-style: italic;
+  -webkit-margin-end: 3px;
+          margin-inline-end: 3px;
+  padding: 1px 1px;
+  border-radius: 5px;
+  -webkit-transition: 1s;
+  transition: 1s;
+  margin-top: 10%;
+}
+
+header nav li:hover {
+  background-color: #dbdada;
+}
+
+section {
+  background-color: white;
+}
+
+section article {
+  text-align: center;
+}
+
+section article h2 {
+  color: black;
+  font-family: "Akaya Kanadaka";
+  font-size: 3.75rem;
+}
+
+section article li {
+  color: black;
+}
+
+aside {
+  background-color: #5ef8174d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+aside li {
+  font-family: "Akaya Kanadaka";
+  font-size: 1.2rem;
+  color: black;
+}
+
+aside p {
+  font-family: "Adamina";
+  font-size: large;
+  text-align: center;
+  color: black;
+}
+
+aside iframe {
+  margin-top: 1px;
+}
+
+footer {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(black), color-stop(#0e0d0d), to(#4b4a4a));
+  background-image: linear-gradient(to top, black, #0e0d0d, #4b4a4a);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+footer h4 {
+  font-family: 'Andamina', serif;
+  border: solid 2px white;
+  border-radius: 10px;
+  padding: 2px 2px;
+  margin-top: 50px;
+  color: white;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+}
+
+.extra {
+  color: darkgoldenrod;
+  font-size: 3.1rem;
+}
+
+.ofertaDelDia__mercaderia {
+  background-color: #5ef8174d;
+  border: solid 2px white;
+  padding: 2px 18px;
+  border-radius: 1px;
+  font-family: 'Akaya Kanadaka', cursive;
+}
+
+.ofertaDelDia__mercaderia--textAlign {
+  list-style-type: none;
+  text-align: left;
+  font-size: 1.9rem;
+}
+
+.receta__titulo--color {
+  font-family: "Akaya Kanadaka";
+  font-size: 3.1rem;
+  color: black;
+}
+
+.caption {
+  color: black;
+  font-family: "Akaya Kanadaka";
+  font-size: 2.5rem;
+}
+
+.cardDeMercaderia {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.card:hover {
+  background-color: #5ef8174d;
+}
+
+.seccionLista__tablaCompra--fontStyle {
+  font-style: oblique;
+}
+
+.seccionFrutas__backgraund--color {
+  background-color: #eec4b157;
+ /*  border: solid 1px #eec4b15720; */
+  height: auto;
+}
+
+.seccionVerdura__backgraund--color {
+  background-color: #b0f2c26b;
+  border: solid 1px #b0f2c26b/2-50;
+  height: auto;
+}
+
+.seccionVarios__backgraund--color {
+  background-color: #fbda704d;
+  /* border: solid 1px #fbda704d20; */
+  height: auto;
+}
+
+.seccionLista__backgraund--color {
+  background-color: #f5eaa881;
+  border: solid 1px #f5eaa881#eec4b157;
+  height: auto;
+}
+
+.border {
+  border: 2px solid #070707;
+}
+
+.aside__receta--border {
+  border: 1px solid white;
+}
+
+.header__logo {
+  margin-right: 9rem;
+  margin-top: 0.3rem;
+}
+
+.header__logo:hover {
+  -webkit-transform: rotateZ(360deg);
+          transform: rotateZ(360deg);
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+.formulario {
+  margin: 1rem;
+}
+
+.formulario--margen {
+  margin: 0.5rem;
+  margin-bottom: 1px;
+}
+
+#tabla {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#carousel {
+  width: 260px;
+  height: 215px;
+}
+
+#gridsEnSection {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "oferta verdura"
+ "oferta fruta"
+ "oferta varios";
+  -ms-grid-columns: 25% 75%;
+      grid-template-columns: 25% 75%;
+  -ms-grid-rows: 33% 33% auto;
+      grid-template-rows: 33% 33% auto;
+}
+
+article#verduras {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: verdura;
+}
+
+article#frutas {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: fruta;
+}
+
+article#varios {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: varios;
+}
+
+article#oferta {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
+  grid-area: oferta;
+}
+
+.gridsEnBody {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "header header"
+ "section aside"
+ "footer footer";
+  -ms-grid-columns: 80% auto;
+      grid-template-columns: 80% auto;
+  -ms-grid-rows: 150px 69% auto;
+      grid-template-rows: 150px 69% auto;
+}
+
+header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: header;
+}
+
+section {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: section;
+}
+
+aside {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: aside;
+}
+
+footer {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: footer;
+}
+
+@media only screen and (max-width: 500px) {
+  .gridsEnBody {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #gridsEnSection {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .header__logo {
+    margin-right: 15%;
+  }
+  .cardDeMercaderia {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media only screen and (min-width: 501px) and (max-width: 960px) {
+  .gridsEnBody {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #gridsEnSection {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .header__logo {
+    margin-right: 20%;
+  }
+}
+
+.errorDePagina {
+  margin-top: 20%;
+  margin-left: 40%;
+}
+
+.fondo__Error--color {
+  background-color: rgba(255, 0, 0, 0.698);
+}
+
+tr > th {
+  padding: 7px;
+  border: 2px solid black;
+}
+/*# sourceMappingURL=indexConSass.css.map */

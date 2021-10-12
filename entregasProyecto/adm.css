@@ -1,0 +1,19 @@
+body{
+    background-color: aquamarine;
+    height: 150px;
+}
+
+
+
+h1{
+    font-style: italic;
+    color: rgb(240, 12, 12);
+    font: size xx-large;
+}
+h3{
+    font-style: oblique;
+}
+#ganancia {
+    display: flex;
+    flex-direction: column;
+}
