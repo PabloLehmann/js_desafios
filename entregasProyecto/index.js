@@ -50,11 +50,11 @@ console.log(ganancias.children[2].value);
 let valor = ganancias.children[1].value;
 let kilo = ganancias.children[2].value;
 let precioFinal = ((valor * 1.50)/kilo);
-console.log( "Tu precio al publico es: $" + precioFinal );
+console.log( "El precio al publico de la " + select.value + " es: $" + precioFinal );
 
 if (precioFinal>0){
 let tuPrecio = document.getElementsByTagName('h3')[2]
-tuPrecio.textContent = "Tu precio al publico es: $" + precioFinal
+tuPrecio.textContent = "El precio al publico de la " + select.value + " es: $" + precioFinal
 
 }
 }

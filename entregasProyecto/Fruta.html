@@ -13,6 +13,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Adamina&family=Akaya+Kanadaka&display=swap" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="./stock.js" defer></script>
+<script src="./frutas.js" defer></script>
 </head>
 
 <body class="gridsEnBody">
@@ -46,6 +49,7 @@
             </div>
           </div>
         </nav>
+        <button id="boton-carrito"><i class="fas fa-shopping-cart"></i><span id="contador-carrito"></span></button>
     
     </header>
     <section class="seccionFrutas__backgraund--color ">
@@ -53,7 +57,7 @@
       <article>
           <h2>Frutas</h2>
             
-              <div class="cardDeMercaderia">
+              <!-- <div class="cardDeMercaderia">
                 <div class="card m-1" style="width: 12rem;">
                   <img src="assets/bananas.jpg" width="90px" height="140px" class="card-img-top" alt="imagenDeBananas">
                   <div class="card-body">
@@ -90,10 +94,28 @@
                   </div>
                 </div>
               </div>
-  
+   -->
         </article>
+        <main id="contenedor-mercaderia__frutas">
+          
 
-        </article>
+        </main>
+
+        <div id="modal-contenedor">
+          <div id="modal-carrito">
+            <h3>Carrito</h3>
+            <button id="carritoCerrar"><i class="fas fa-times-circle"></i></button>
+            <div id="carrito-contenedor">
+
+
+            </div>
+            <p class="precioProducto">Precio Total: $ <span id="precioTotal"></span> </p>
+
+          </div>
+
+        </div>
+
+      
 
     </section>
     <aside class="aside__receta--border">
