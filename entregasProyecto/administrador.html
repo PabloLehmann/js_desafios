@@ -8,14 +8,15 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script defer src="./index.js"></script>
     <script defer src="./jquery.js"></script>
+    <script defer src="./animaciones.js"></script>
     <link rel="stylesheet" href="adm.css">
 </head>
-<body>
-    
-    <h1></h1>
+<body id="body">
+    <h1 class="titulo"></h1>
     <h3></h3>
     <h3></h3>
-    
+    <p id="p1">Trabajamos para ud</p>
+    <div id="centrar">
     
     <form id="ganancia">
         <select name="mercaderia" id="fruta">
@@ -23,33 +24,37 @@
         <input type="number" placeholder="Valor de mercaderia">
         <input type="number" placeholder="Peso de la mercaderia">
         <input type="submit" value="Enviar">
-    
-    
+        
+        
     </form>
     <h3></h3>
     <h2></h2>
-
+    
     <!-- <ol>
         <li></li>
         <li></li>
         <li></li>
         <li></li>
     </ol> -->
-    <h1>Ingresar clientes</h1>
-    <form id="listaDeClientes">
+</div>
+    <h1>Ingresar clientes?</h1>
+    <button id="fadein">Si</button>
+    <button id="fadeout">Cerrar</button>
     
     
-    <input type="text" placeholder="Nombre">
-    <input type="text" placeholder="Apellido">
-    <input type="text" placeholder="Domicilio">
-    <input type="text" placeholder="Telefono">
-    <input type="submit" value=" Enviar">
-</form>
+    <form id="listaDeClientes" style="display: none;">
+    
+    
+        <input type="text" placeholder="Nombre">
+        <input type="text" placeholder="Apellido">
+        <input type="text" placeholder="Domicilio">
+        <input type="text" placeholder="Telefono">
+        <input type="submit" value=" Enviar">
+    </form>
  <h3></h3>
  <div id="parrafo"></div>
  <button id="boton">Si</button>
  <div id="nombreStock"></div>
- 
     
 </body>
 </html>

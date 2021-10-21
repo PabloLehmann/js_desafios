@@ -1,6 +1,11 @@
 body{
-    background-color: aquamarine;
-    height: 150px;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+    /* background-color: aquamarine; */
+    height: 250px;
+    
 }
 
 
@@ -8,7 +13,7 @@ body{
 h1{
     font-style: italic;
     color: rgb(240, 12, 12);
-    font: size xx-large;
+    font-size: xx-large;
 }
 h3{
     font-style: oblique;

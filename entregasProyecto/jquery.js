@@ -3,7 +3,7 @@ parrafo.html('<h2>Ingresar mercaderia a stock?</h2>')
 ///////////////////////////
 
 $('#boton').on('click', ()=> {
-
+$("#myForm").remove()
 $("body").append(`<form id="myForm">
                        <input type="text" id="mercaderia" >
                        <input type="number" id="kilos">
@@ -15,8 +15,10 @@ $("#boton2").on("click", (e) => {
     let mercaderia = $("#mercaderia").val()
     let kilos = $("#kilos").val()
     const nombreStock = $("#nombreStock")
+    nombreStock.html("")
     nombreStock.html("La mercaderia ingresada a stok es: "+mercaderia + " con la cantidad de kilos de : " + kilos);
     
 });
 
 })
+//////////////////////////////////////////
