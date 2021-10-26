@@ -152,7 +152,7 @@ footer h4 {
 
 .seccionFrutas__backgraund--color {
   background-color: #eec4b157;
- /*  border: solid 1px #eec4b15720; */
+  border: solid 1px #eec4b15720;
   height: auto;
 }
 
@@ -164,7 +164,7 @@ footer h4 {
 
 .seccionVarios__backgraund--color {
   background-color: #fbda704d;
-  /* border: solid 1px #fbda704d20; */
+  border: solid 1px #fbda704d20;
   height: auto;
 }
 
@@ -220,9 +220,7 @@ footer h4 {
 #gridsEnSection {
   display: -ms-grid;
   display: grid;
-      grid-template-areas: "oferta verdura"
- "oferta fruta"
- "oferta varios";
+      grid-template-areas: "oferta verdura" "oferta fruta" "oferta varios";
   -ms-grid-columns: 25% 75%;
       grid-template-columns: 25% 75%;
   -ms-grid-rows: 33% 33% auto;
@@ -257,9 +255,7 @@ article#oferta {
 .gridsEnBody {
   display: -ms-grid;
   display: grid;
-      grid-template-areas: "header header"
- "section aside"
- "footer footer";
+      grid-template-areas: "header header" "section aside" "footer footer";
   -ms-grid-columns: 80% auto;
       grid-template-columns: 80% auto;
   -ms-grid-rows: 150px 69% auto;
@@ -369,5 +365,156 @@ footer {
 tr > th {
   padding: 7px;
   border: 2px solid black;
+}
+
+#contenedor-mercaderia__frutas {
+  max-width: 1200px;
+  margin: 60px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#boton-carrito {
+  border: none;
+  color: royalblue;
+  font-size: 40px;
+  background-color: white;
+  border-radius: 50%;
+  padding: 10px 20px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+#boton-carrito:hover {
+  cursor: pointer;
+  color: white;
+  background-color: royalblue;
+}
+
+#boton-carrito:focus {
+  outline: none;
+}
+
+.boton-agregar {
+  background-color: royalblue;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 5px;
+  border: none;
+}
+
+.boton-agregar:hover {
+  cursor: pointer;
+}
+
+.boton-agregar:focus {
+  outline: none;
+}
+
+.modal-contenedor {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-carrito {
+  position: relative;
+  background-color: white;
+  min-width: 500px;
+  padding: 20px;
+  margin-top: -100%;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.modal-active .modal-carrito {
+  margin-top: 0;
+}
+
+.modal-carrito h3 {
+  color: royalblue;
+  padding-bottom: 5px;
+}
+
+.modal-carrito #carritoCerrar {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 20px;
+  color: royalblue;
+  border: none;
+  background-color: white;
+}
+
+.modal-carrito #carritoCerrar:hover {
+  cursor: pointer;
+}
+
+.modal-carrito #carritoCerrar:focus {
+  outline: none;
+}
+
+.modal-carrito .precioProducto {
+  padding-top: 10px;
+}
+
+.productoEnCarrito {
+  border-left: 5px solid lightblue;
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
+  margin: 5px 0;
+  padding: 5px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.productoEnCarrito:hover {
+  border-left: 5px solid royalblue;
+}
+
+.boton-eliminar {
+  background-color: white;
+  color: red;
+  border: none;
+  font-size: 20px;
+}
+
+.boton-eliminar:hover {
+  cursor: pointer;
+}
+
+.boton-eliminar:focus {
+  outline: none;
 }
 /*# sourceMappingURL=indexConSass.css.map */

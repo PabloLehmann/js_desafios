@@ -1,24 +1,58 @@
 body{
-    /* display: flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; */
-    /* background-color: aquamarine; */
-    height: 250px;
+    align-items: center; 
+    height: 100%;
     
 }
-
-
+header{
+    background-color: black;
+    height: 150px;
+    width: 100%;
+}
+#titulo{
+    display: flex;
+    justify-content:center;
+    color: white;
+    font-size: 50px;
+    
+}
+#listaStock{
+    
+    background-color: rgb(173, 231, 114);
+    border-radius: 8px;
+    border: solid 1px;
+}
+.centrar__boton{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#myForm{
+    background-color: rgba(0, 128, 0, 0);
+    height: 80px;
+}
 
 h1{
     font-style: italic;
-    color: rgb(240, 12, 12);
+    color: rgb(0, 0, 0);
     font-size: xx-large;
-}
+    }
 h3{
     font-style: oblique;
+    color: green;
 }
 #ganancia {
     display: flex;
     flex-direction: column;
+}
+button{
+    color: white;
+    background-color: black;
+    border-radius: 8px;
+    height: 35px;
+    width: 50px;
+    margin: 5px;
+
 }

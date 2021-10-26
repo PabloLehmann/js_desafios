@@ -5,8 +5,8 @@ parrafo.html('<h2>Ingresar mercaderia a stock?</h2>')
 $('#boton').on('click', ()=> {
 $("#myForm").remove()
 $("body").append(`<form id="myForm">
-                       <input type="text" id="mercaderia" >
-                       <input type="number" id="kilos">
+                       <input type="text" id="mercaderia" placeholder="Mercaderia">
+                       <input type="number" id="kilos" placeholder="Ingrese el peso">
                        <input type="submit" id= "boton2">
                    </form>`);
 

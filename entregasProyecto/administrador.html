@@ -9,13 +9,24 @@
     <script defer src="./index.js"></script>
     <script defer src="./jquery.js"></script>
     <script defer src="./animaciones.js"></script>
+    <script src="./ajax.js" defer></script>
     <link rel="stylesheet" href="adm.css">
 </head>
 <body id="body">
-    <h1 class="titulo"></h1>
+    <header>
+
+        <!-- <form id="contraseña"> 
+            
+            <input type="" placeholder="contraseña">
+            <input type="submit" value="enviar">
+            
+        </form> -->
+        
+        <h1 id="titulo"></h1>
+    </header>
     <h3></h3>
     <h3></h3>
-    <p id="p1">Trabajamos para ud</p>
+    <p id="p1">Calculo-precio-publico</p>
     <div id="centrar">
     
     <form id="ganancia">
@@ -30,17 +41,15 @@
     <h3></h3>
     <h2></h2>
     
-    <!-- <ol>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-    </ol> -->
+    
 </div>
-    <h1>Ingresar clientes?</h1>
+
+<h1>Ingresar clientes?</h1>
+<div class="centrar__boton">
     <button id="fadein">Si</button>
     <button id="fadeout">Cerrar</button>
     
+</div>
     
     <form id="listaDeClientes" style="display: none;">
     
@@ -51,10 +60,23 @@
         <input type="text" placeholder="Telefono">
         <input type="submit" value=" Enviar">
     </form>
- <h3></h3>
+    <h3></h3>
+    <hr>
+    <div class="centrar__boton">
+
+        <button id="fadein-2">Ver Stock</button>
+        <button id="fadeout-2">Cerrar Stock</button>
+        
+        <div id="listaStock" style="display: none;">
+            
+            <ul id="stock"></ul>
+            
+        </div>
+    </div>
  <div id="parrafo"></div>
  <button id="boton">Si</button>
  <div id="nombreStock"></div>
+ 
     
 </body>
 </html>

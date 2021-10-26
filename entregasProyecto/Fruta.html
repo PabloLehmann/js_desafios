@@ -15,6 +15,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Adamina&family=Akaya+Kanadaka&display=swap" rel="stylesheet">
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="./stock.js" defer></script>
+<script src="./modalFruta.js" defer></script>
 <script src="./frutas.js" defer></script>
 </head>
 
@@ -84,7 +85,6 @@
                     <a href="#" class="btn btn-primary">Añadir al carrito.</a>
                   </div>
                 </div>
-  
                 <div class="card m-1" style="width: 12rem;">
                   <img src="assets/uvas.jpg" width="90px" height="140px" class="card-img-top" alt="imagenDeUvas">
                   <div class="card-body">
@@ -94,8 +94,10 @@
                   </div>
                 </div>
               </div>
-   -->
-        </article>
+              
+            </article>
+          -->
+          <button id="boton-carrito"><i class="fas fa-shopping-cart"></i><span id="contadorCarrito">0</span></button>
         <main id="contenedor-mercaderia__frutas">
           
 
@@ -104,7 +106,7 @@
         <div id="modal-contenedor">
           <div id="modal-carrito">
             <h3>Carrito</h3>
-            <button id="carritoCerrar"><i class="fas fa-times-circle"></i></button>
+            <button id="carritoCerrar"><i class="fas fa-times-circle">TT</i></button>
             <div id="carrito-contenedor">
 
 

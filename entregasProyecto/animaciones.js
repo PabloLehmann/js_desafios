@@ -6,7 +6,7 @@ $('#fadein').click (()=>{
         $('#listaDeClientes').fadeOut(1000)
     })
     //////////////////////////////////////
-    $("#p1").css("color", "red")
+    $("#p1").css("color", "black")
             .css("font-size"," xx-large")
             .slideUp(2000)
             .slideDown(2000)
@@ -21,18 +21,18 @@ $('#fadein').click (()=>{
               .fadeOut(1000)
               .fadeIn(1000)
               
-              .css("font-zide","700")
+              
 
-    $("#centrar").css("background"," rgb(184, 233, 217)")
-                 .css("align-items", "center")     
+    $("#centrar").css("background"," rgb(184, 233, 217)")     
                  .css("border", "solid")
                  .css("height", "150px")
-                 .css("width", "350px"),
+                 .css("width", "350px")
                  
    /////////////////////////////////////
-   $(".titulo").animate({  left:'250px',
-                        height:'70px',
-                        width:'250px'   }, 
-                         "5000"           );
-              
-              
+  /*  $("#titulo").animate({  
+                           "left":"30px",
+                           "height":'70px',
+                           "width":'250px',},
+                                 "slow"  , 
+                                 )
+             */
