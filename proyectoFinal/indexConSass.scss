@@ -1,0 +1,525 @@
+$colorFrutas: #eec4b157;
+$colorVerduras: #b0f2c26b;
+$colorVarios: #fbda704d;
+$colorLista:#f5eaa881;
+$ancho:500px;
+@mixin fuente-Y-Peso($f, $p) {
+    font-family: $f;
+    font-size: $p;
+
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+header{
+    
+    background-image:url(assets/header.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position:bottom;
+    display: flex;
+    justify-content:flex-end;
+
+    nav li{
+        
+        font-style:italic;
+        margin-inline-end: 3px;
+        padding: 1px 1px;
+        border-radius: 5px;
+        transition: 1s;
+        margin-top: 10%;
+        
+    }
+    nav li:hover{
+        background-color: rgb(219, 218, 218);
+    }
+}
+
+
+
+section{
+    background-color: white;
+    article{
+        text-align:center;
+        h2{
+            color: black;
+            @include fuente-Y-Peso('Akaya Kanadaka', 3.75rem );
+        }
+        li{
+            color:black;
+        }
+    }
+
+}
+
+aside{
+    background-color: #5ef8174d;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    
+    li{
+        @include fuente-Y-Peso('Akaya Kanadaka', 1.2rem );
+        color:black;
+    }
+    p{
+        @include fuente-Y-Peso('Adamina', large );
+        text-align: center;
+        color:black;
+    }
+    iframe{
+        margin-top: 1px;
+    }
+}
+
+footer{
+    background-image: linear-gradient(to top, black,rgb(14, 13, 13), rgb(75, 74, 74));
+    display: flex;
+    justify-content:space-evenly;
+    
+    h4{
+        font-family: 'Andamina', serif;
+        border: solid 2px white;
+        border-radius: 10px;
+        padding: 2px 2px;
+        margin-top: 50px;
+        color: white;
+        height: min-content;
+    }
+}
+.extra{
+    color: darkgoldenrod;
+    font-size: 3.1rem;
+}
+.ofertaDelDia__mercaderia{
+    background-color: #5ef8174d;
+    border: solid 2px white;
+    padding: 2px 18px;
+    border-radius: 1px;
+    font-family: 'Akaya Kanadaka', cursive;
+    
+}
+
+.ofertaDelDia__mercaderia--textAlign{
+    list-style-type: none;
+    text-align:left;
+    font-size: 1.9rem;
+
+    
+}
+.receta__titulo--color{
+    @include fuente-Y-Peso('Akaya Kanadaka', 3.1rem );
+    color:black;
+}
+
+.caption{
+    color: rgb(0, 0, 0);
+    @include fuente-Y-Peso('Akaya Kanadaka', 2.5rem );
+}
+.cardDeMercaderia{
+    display: flex;
+    justify-content: space-evenly;
+}
+.card:hover{
+    background-color: #5ef8174d;
+}
+.seccionLista__tablaCompra--fontStyle{
+    font-style: oblique;
+}
+.seccionFrutas__backgraund--color{
+    background-color: $colorFrutas;
+    border:solid 1px $colorFrutas+20;
+    height: auto;
+}
+.seccionVerdura__backgraund--color{
+    background-color:$colorVerduras;
+    border: solid 1px (($colorVerduras/2)-50);
+    height: auto;
+}
+.seccionVarios__backgraund--color{
+    background-color:$colorVarios;
+    border: solid 1px ($colorVarios+20);
+    height: auto;
+}
+.seccionLista__backgraund--color{
+    background-color: $colorLista;
+    border: solid 1px $colorLista+$colorFrutas;
+    height: auto;
+}
+.border{
+    border: 2px solid rgb(7, 7, 7);
+}
+.aside__receta--border{
+    border: 1px solid white;
+}
+.header__logo{
+     margin-right: 9rem;
+     margin-top: 0.3rem;
+}
+.header__logo:hover{
+    transform:rotateZ(360deg);
+    transition: 2s;
+}
+.formulario{
+    margin: 1rem;
+    
+}
+.formulario--margen{
+    display: flex;
+    justify-content: center;
+    margin: 0.5rem;
+    margin-bottom: 1px;
+}
+#tabla{
+    display: flex;
+    justify-content: center;
+}
+#carousel{
+    width: 260px;
+    height: 215px;
+}
+
+#gridsEnSection{
+    display: grid;
+    grid-template-areas: 
+    "oferta verdura"
+    "oferta fruta"
+    "oferta varios";
+    grid-template-columns: 25% 75%;
+    grid-template-rows: 33% 33% auto;
+}
+article#verduras{
+grid-area: verdura;
+}
+article#frutas{
+    grid-area: fruta;
+}
+article#varios{
+    grid-area: varios;
+}
+article#oferta{
+    grid-area: oferta;
+}
+.gridsEnBody{
+    display: grid;
+    grid-template-areas:
+    "header header"
+    "section aside"
+    "footer footer";
+    grid-template-columns: 80% auto;
+    grid-template-rows: 150px 75% auto ;
+}
+header{
+    grid-area: header;
+}
+section{
+    grid-area: section;
+}
+aside{
+    grid-area: aside;
+}
+footer{
+    grid-area: footer;
+}
+@media only screen and(max-width: $ancho){
+    .gridsEnBody{
+        display: flex;
+        flex-direction: column;
+    }
+    #gridsEnSection{
+        display: flex;
+        flex-direction: column;
+    }
+    .header__logo{
+        margin-right: 15%;
+    }
+    .cardDeMercaderia{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        
+        
+    }
+}
+@media only screen and(min-width: 501px)and(max-width: 960px) {
+    .gridsEnBody{
+        display: flex;
+        flex-direction: column;
+    }
+    #gridsEnSection{
+        display: flex;
+        flex-direction:column;
+    }
+    .header__logo{
+        margin-right: 20%;
+    }
+    
+}
+.errorDePagina{
+   margin-top: 20%;
+   margin-left: 40%;
+   
+}
+.fondo__Error--color{
+    background-color: rgba(255, 0, 0, 0.698);
+
+}
+
+
+tr>th{
+    padding: 7px;
+    border: 2px solid black;
+}
+
+#listaDeCliente{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 300px;
+    border: solid 2px;
+}
+button{
+    background-color: rgb(116, 240, 34);
+    border: solid black 1px;
+    border-radius: 5px;
+    margin-top: 5px;
+    padding: 3px;
+    color: white;
+    
+}
+//////////tabla de compras//////
+#tabla--compra{
+    border: solid 2px;
+    tr{
+        border: solid 2px;
+    }
+    td{
+        border: solid 2px;
+    }
+    
+}
+////////////////////////Carro de compras////////////////////////////////
+ 
+#contenedor-mercaderia__frutas {
+    max-width: 1200px;
+    margin: 60px auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    
+}
+#contenedor-mercaderia__Verdura {
+    max-width: 1200px;
+    margin: 60px auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    
+}
+#contenedor-mercaderia__Varios {
+    max-width: 1200px;
+    margin: 60px auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    
+}
+
+#boton-carrito {
+    border: none;
+    color: rgb(101, 236, 11);
+    font-size: 30px;
+    background-color:transparent;
+    border-radius: 50%;
+    padding: 10px 20px;
+    transition: all .3s;
+}
+#boton-carrito2 {
+    border: none;
+    color: rgb(101, 236, 11);
+    font-size: 30px;
+    background-color:transparent;
+    border-radius: 50%;
+    padding: 10px 20px;
+    transition: all .3s;
+}
+#boton-carrito3 {
+    border: none;
+    color: rgb(101, 236, 11);
+    font-size: 30px;
+    background-color:transparent;
+    border-radius: 50%;
+    padding: 10px 20px;
+    transition: all .3s;
+}
+#boton-carrito:hover {
+    cursor: pointer;
+    color: white;
+    background-color: rgb(101, 236, 11);
+    padding: 10px;
+    margin: 35px;
+    
+}
+#boton-carrito2:hover {
+    cursor: pointer;
+    color: white;
+    background-color: rgb(101, 236, 11);
+    padding: 10px;
+    margin: 35px;
+}
+#boton-carrito3:hover {
+    cursor: pointer;
+    color: white;
+    background-color: rgb(101, 236, 11);
+    padding: 10px;
+    margin: 35px;
+}
+#boton-carrito:focus {
+    outline: none;
+}
+#boton-carrito2:focus {
+    outline: none;
+}
+#boton-carrito3:focus {
+    outline: none;
+}
+
+.boton-agregar {
+    background-color: rgb(101, 236, 11);
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: none;
+}
+.boton-agregar:hover {
+    cursor: pointer;
+}
+.boton-agregar:focus {
+    outline: none;
+}
+
+.modal-contenedor {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal-active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-carrito {
+    position: relative;
+    background-color: white;
+    min-width: 500px;
+    padding: 20px;
+    margin-top: -100%;
+    transition: all .5s;
+}
+
+.modal-active .modal-carrito {
+    margin-top: 0;
+}
+
+.modal-carrito h3 {
+    color: rgb(101, 236, 11);
+    padding-bottom: 5px;
+}
+.modal-carrito #carritoCerrar {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 20px;
+    color:rgb(101, 236, 11);
+    border: none;
+    background-color: white;
+}
+.modal-carrito #carritoCerrar2 {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 20px;
+    color:rgb(101, 236, 11);
+    border: none;
+    background-color: white;
+}
+.modal-carrito #carritoCerrar3 {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 20px;
+    color:rgb(101, 236, 11);
+    border: none;
+    background-color: white;
+}
+.modal-carrito #carritoCerrar:hover {
+    cursor: pointer;
+}
+.modal-carrito #carritoCerrar:focus {
+    outline: none;
+}
+.modal-carrito #carritoCerrar2:hover {
+    cursor: pointer;
+}
+.modal-carrito #carritoCerrar2:focus {
+    outline: none;
+}
+.modal-carrito #carritoCerrar3:hover {
+    cursor: pointer;
+}
+.modal-carrito #carritoCerrar3:focus {
+    outline: none;
+}
+.modal-carrito .precioProducto {
+    padding-top: 10px;
+    
+}
+.producto{
+    border: solid 1px;
+    width: 190px;
+    margin-bottom: 15px;
+    
+}
+.productoEnCarrito {
+    border-left: 5px solid lightblue;
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+    margin: 5px 0;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.productoEnCarrito:hover {
+    border-left: 5px solid royalblue;
+}
+
+.boton-eliminar {
+    background-color: white;
+    color: red;
+    border: none;
+    font-size: 20px;
+}
+
+.boton-eliminar:hover {
+    cursor: pointer;
+}
+.boton-eliminar:focus {
+    outline: none;
+}

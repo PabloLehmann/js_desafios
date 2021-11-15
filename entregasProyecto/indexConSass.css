@@ -138,8 +138,9 @@ footer h4 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .card:hover {
@@ -199,6 +200,12 @@ footer h4 {
 }
 
 .formulario--margen {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 0.5rem;
   margin-bottom: 1px;
 }
@@ -367,24 +374,87 @@ tr > th {
   border: 2px solid black;
 }
 
+#listaDeCliente {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 300px;
+  border: solid 2px;
+}
+
 #contenedor-mercaderia__frutas {
   max-width: 1200px;
   margin: 60px auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#contenedor-mercaderia__Verdura {
+  max-width: 1200px;
+  margin: 60px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#contenedor-mercaderia__Varios {
+  max-width: 1200px;
+  margin: 60px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 
 #boton-carrito {
   border: none;
-  color: royalblue;
-  font-size: 40px;
-  background-color: white;
+  color: #65ec0b;
+  font-size: 30px;
+  background-color: transparent;
+  border-radius: 50%;
+  padding: 10px 20px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+#boton-carrito2 {
+  border: none;
+  color: #65ec0b;
+  font-size: 30px;
+  background-color: transparent;
+  border-radius: 50%;
+  padding: 10px 20px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+#boton-carrito3 {
+  border: none;
+  color: #65ec0b;
+  font-size: 30px;
+  background-color: transparent;
   border-radius: 50%;
   padding: 10px 20px;
   -webkit-transition: all .3s;
@@ -394,19 +464,46 @@ tr > th {
 #boton-carrito:hover {
   cursor: pointer;
   color: white;
-  background-color: royalblue;
+  background-color: #65ec0b;
+  padding: 10px;
+  margin: 35px;
+}
+
+#boton-carrito2:hover {
+  cursor: pointer;
+  color: white;
+  background-color: #65ec0b;
+  padding: 10px;
+  margin: 35px;
+}
+
+#boton-carrito3:hover {
+  cursor: pointer;
+  color: white;
+  background-color: #65ec0b;
+  padding: 10px;
+  margin: 35px;
 }
 
 #boton-carrito:focus {
   outline: none;
 }
 
+#boton-carrito2:focus {
+  outline: none;
+}
+
+#boton-carrito3:focus {
+  outline: none;
+}
+
 .boton-agregar {
-  background-color: royalblue;
+  background-color: #65ec0b;
   color: white;
   font-size: 18px;
   font-weight: 700;
   padding: 5px;
+  margin-bottom: 10px;
   border: none;
 }
 
@@ -459,7 +556,7 @@ tr > th {
 }
 
 .modal-carrito h3 {
-  color: royalblue;
+  color: #65ec0b;
   padding-bottom: 5px;
 }
 
@@ -468,7 +565,27 @@ tr > th {
   top: 15px;
   right: 15px;
   font-size: 20px;
-  color: royalblue;
+  color: #65ec0b;
+  border: none;
+  background-color: white;
+}
+
+.modal-carrito #carritoCerrar2 {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 20px;
+  color: #65ec0b;
+  border: none;
+  background-color: white;
+}
+
+.modal-carrito #carritoCerrar3 {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 20px;
+  color: #65ec0b;
   border: none;
   background-color: white;
 }
@@ -481,8 +598,30 @@ tr > th {
   outline: none;
 }
 
+.modal-carrito #carritoCerrar2:hover {
+  cursor: pointer;
+}
+
+.modal-carrito #carritoCerrar2:focus {
+  outline: none;
+}
+
+.modal-carrito #carritoCerrar3:hover {
+  cursor: pointer;
+}
+
+.modal-carrito #carritoCerrar3:focus {
+  outline: none;
+}
+
 .modal-carrito .precioProducto {
   padding-top: 10px;
+}
+
+.producto {
+  border: solid 1px;
+  width: 190px;
+  margin-bottom: 15px;
 }
 
 .productoEnCarrito {

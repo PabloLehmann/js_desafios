@@ -37,7 +37,7 @@ const agregarAlCarrito = (itemId) => {
         productoEnCarrito.cantidad++
     } else {
 
-        const producto = stockProductos.find( (prod) => prod.id === itemId)
+        const producto = stockMercaderia.find( (prod) => prod.id === itemId)
     
         carrito.push({
             id: producto.id,
@@ -50,6 +50,8 @@ const agregarAlCarrito = (itemId) => {
 
     console.log(carrito)
     actualizarCarrito()
+    let guardarDatos = JSON.stringify(carrito)
+    localStorage.setItem("carrito", guardarDatos)
 }
 
 // === RENDER CARRITO ===
@@ -73,4 +75,19 @@ const actualizarCarrito = () => {
 
     contadorCarrito.innerText = carrito.reduce((acc, prod) => acc += prod.cantidad, 0)
     precioTotal.innerText = carrito.reduce((acc, prod) => acc += prod.precio * prod.cantidad, 0)
+}
+
+// === ELIMINAR PRODUCTO ===
+
+const eliminarProducto = (itemId) => {
+    const producto = carrito.find((prod) => prod.id === itemId)
+    
+    producto.cantidad--
+
+    if (producto.cantidad === 0) {
+        const index = carrito.indexOf(producto)
+        carrito.splice(index, 1)
+    }
+   
+    actualizarCarrito()
 }

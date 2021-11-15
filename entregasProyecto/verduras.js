@@ -1,42 +1,96 @@
-let verduras = [
-    {id:1, nombre:papa, precio: 45},
-    {id:2, nombre:camote, precio: 65},
-    {id:3, nombre:zanahoria, precio: 60},
-    {id:4, nombre:zapallo, precio: 80},
+
+const contenedorMercaVerdura = document.getElementById('contenedor-mercaderia__Verdura')
+const contenedorCarrito2 = document.getElementById('carrito-contenedor2')
+
+const contadorCarrito2= document.getElementById('contador-carrito2')
+const precioTotal2 = document.getElementById('precioTotal2')
+
+const carritoVerduras = []
+
+const mostrarProductos2 = (array) =>{
+    contenedorMercaVerdura.innerHTML= ''
+
+    array.forEach((producto) => {
+        const div = document.createElement('div')
+        div.classList.add('producto')
+        div.innerHTML = `
+                        <img src= ${producto.img} alt = "">
+                        <h3>${producto.nombre}</h3>
+                        <p class="precioProducto">Precio:$${producto.precio}</p></p>
+                        <button onclick="agregarAlCarrito(${producto.id})" class="boton-agregar">Agregar <i class="fas fa-shopping-cart"></i></button>
+        
+                        `
+                   contenedorMercaVerdura.appendChild(div)    
+        
+    });
     
-]
+}
+mostrarProductos2(stockMercaderiaVerdura)
 
+////agregando al carrito///////
 
+const agregarAlCarrito = (itemId) => {
 
+    const productoEnCarrito = carritoVerduras.find((prod) => prod.id === itemId)
 
+    if (productoEnCarrito) {
+        productoEnCarrito.cantidad++
+    } else {
 
-let papa = document.getElementById("papa")
-papa.onclick = () =>{
-    let papa1 = "Papa"
-    localStorage.setItem("carrito-1", papa1)
-    console.log(papa1)
+        const producto = stockMercaderiaVerdura.find( (prod) => prod.id === itemId)
+    
+        carritoVerduras.push({
+            id: producto.id,
+            nombre: producto.nombre,
+            precio: producto.precio,
+            cantidad: 1
+        })
+    }
+    
+
+    console.log(carritoVerduras)
+    actualizarCarrito()
+    
+    let guardarDatos = JSON.stringify(carritoVerduras)
+    localStorage.setItem("carritoVerduras", guardarDatos)
 }
 
-let camote = document.getElementById("camote")
-camote.onclick = () =>{
-    let camote1 = "Camote"
-    localStorage.setItem("carrito-2", camote1)
-    console.log(camote1)
+// === RENDER CARRITO ===
+
+const actualizarCarrito = () => {
+    contenedorCarrito2.innerHTML = ""
+
+    carritoVerduras.forEach((prod) => {
+        const div = document.createElement('div')
+        div.classList.add('productoEnCarrito')
+
+        div.innerHTML = `
+                <p>${prod.nombre}</p>
+                <p>Precio: $${prod.precio}</p>
+                <p>Cantidad: ${prod.cantidad}</p>
+                <button onclick="eliminarProducto(${prod.id})" class="boton-eliminar"><i class="fas fa-trash-alt"></i></button>
+             `
+
+        contenedorCarrito2.appendChild(div)
+    })
+
+    contadorCarrito2.innerText = carritoVerduras.reduce((acc, prod) => acc += prod.cantidad, 0)
+    precioTotal2.innerText = carritoVerduras.reduce((acc, prod) => acc += prod.precio * prod.cantidad, 0)
 }
-let zanahoria = document.getElementById("zanahoria")
-zanahoria.onclick=()=>{
-    let zanahoria1 = "zanahoria"
-    localStorage.setItem("carrito-3", zanahoria1)
-    console.log(zanahoria1);
-}    
-let zapallo = document.getElementById("zapallo")
-zapallo.onclick=()=>{
-    let zapallo1 = "zapallo"
-    localStorage.setItem("carrito-4", zapallo1)
-    console.log(zapallo1);
-} 
-let mercaderia= localStorage.getItem("carrito-3")
 
-console.log(stockMercaderia);
+// === ELIMINAR PRODUCTO ===
 
+const eliminarProducto = (itemId) => {
+    const producto = carritoVerduras.find((prod) => prod.id === itemId)
     
+    producto.cantidad--
+
+    if (producto.cantidad === 0) {
+        const index = carritoVerduras.indexOf(producto)
+        carritoVerduras.splice(index, 1)
+    }
+   
+    actualizarCarrito()
+    console.log(carritoVerduras);
+    
+}

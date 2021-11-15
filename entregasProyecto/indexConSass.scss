@@ -122,7 +122,7 @@ footer{
 }
 .cardDeMercaderia{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 .card:hover{
     background-color: #5ef8174d;
@@ -169,6 +169,8 @@ footer{
     
 }
 .formulario--margen{
+    display: flex;
+    justify-content: center;
     margin: 0.5rem;
     margin-bottom: 1px;
 }
@@ -274,22 +276,64 @@ tr>th{
     padding: 7px;
     border: 2px solid black;
 }
+
+#listaDeCliente{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 300px;
+    border: solid 2px;
+}
 ////////////////////////////////////////////////////////
  
 #contenedor-mercaderia__frutas {
     max-width: 1200px;
     margin: 60px auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    
+}
+#contenedor-mercaderia__Verdura {
+    max-width: 1200px;
+    margin: 60px auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    
+}
+#contenedor-mercaderia__Varios {
+    max-width: 1200px;
+    margin: 60px auto;
+    display: flex;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     
 }
 
 #boton-carrito {
     border: none;
-    color: royalblue;
-    font-size: 40px;
-    background-color: white;
+    color: rgb(101, 236, 11);
+    font-size: 30px;
+    background-color:transparent;
+    border-radius: 50%;
+    padding: 10px 20px;
+    transition: all .3s;
+}
+#boton-carrito2 {
+    border: none;
+    color: rgb(101, 236, 11);
+    font-size: 30px;
+    background-color:transparent;
+    border-radius: 50%;
+    padding: 10px 20px;
+    transition: all .3s;
+}
+#boton-carrito3 {
+    border: none;
+    color: rgb(101, 236, 11);
+    font-size: 30px;
+    background-color:transparent;
     border-radius: 50%;
     padding: 10px 20px;
     transition: all .3s;
@@ -297,18 +341,42 @@ tr>th{
 #boton-carrito:hover {
     cursor: pointer;
     color: white;
-    background-color: royalblue;
+    background-color: rgb(101, 236, 11);
+    padding: 10px;
+    margin: 35px;
+    
+}
+#boton-carrito2:hover {
+    cursor: pointer;
+    color: white;
+    background-color: rgb(101, 236, 11);
+    padding: 10px;
+    margin: 35px;
+}
+#boton-carrito3:hover {
+    cursor: pointer;
+    color: white;
+    background-color: rgb(101, 236, 11);
+    padding: 10px;
+    margin: 35px;
 }
 #boton-carrito:focus {
     outline: none;
 }
+#boton-carrito2:focus {
+    outline: none;
+}
+#boton-carrito3:focus {
+    outline: none;
+}
 
 .boton-agregar {
-    background-color: royalblue;
+    background-color: rgb(101, 236, 11);
     color: white;
     font-size: 18px;
     font-weight: 700;
     padding: 5px;
+    margin-bottom: 10px;
     border: none;
 }
 .boton-agregar:hover {
@@ -351,7 +419,7 @@ tr>th{
 }
 
 .modal-carrito h3 {
-    color: royalblue;
+    color: rgb(101, 236, 11);
     padding-bottom: 5px;
 }
 .modal-carrito #carritoCerrar {
@@ -359,7 +427,25 @@ tr>th{
     top: 15px;
     right: 15px;
     font-size: 20px;
-    color: royalblue;
+    color:rgb(101, 236, 11);
+    border: none;
+    background-color: white;
+}
+.modal-carrito #carritoCerrar2 {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 20px;
+    color:rgb(101, 236, 11);
+    border: none;
+    background-color: white;
+}
+.modal-carrito #carritoCerrar3 {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 20px;
+    color:rgb(101, 236, 11);
     border: none;
     background-color: white;
 }
@@ -369,11 +455,28 @@ tr>th{
 .modal-carrito #carritoCerrar:focus {
     outline: none;
 }
+.modal-carrito #carritoCerrar2:hover {
+    cursor: pointer;
+}
+.modal-carrito #carritoCerrar2:focus {
+    outline: none;
+}
+.modal-carrito #carritoCerrar3:hover {
+    cursor: pointer;
+}
+.modal-carrito #carritoCerrar3:focus {
+    outline: none;
+}
 .modal-carrito .precioProducto {
     padding-top: 10px;
     
 }
-
+.producto{
+    border: solid 1px;
+    width: 190px;
+    margin-bottom: 15px;
+    
+}
 .productoEnCarrito {
     border-left: 5px solid lightblue;
     border-bottom-left-radius: 3px;

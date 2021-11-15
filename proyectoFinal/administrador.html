@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script defer src="./JAVASCRIPT/index.js"></script>
+    <script defer src="./JAVASCRIPT/jquery.js"></script>
+    <script defer src="./JAVASCRIPT/animaciones.js"></script>
+    <script src="./JAVASCRIPT/ajax.js" defer></script>
+    <link rel="stylesheet" href="adm.css">
+</head>
+<body id="body">
+    <header>
+
+        <form> 
+            
+            <input type="" placeholder="contraseña" id="contraseña">
+            <button type="number" id="btn-contraseña">Ingresar</button>
+            
+        </form>
+        
+        <h1 id="titulo"></h1>
+    </header>
+    <section>
+
+        <article id="contenido">
+            
+        <h3></h3>
+        <h3></h3>
+        <p id="p1">Calculo-precio-publico</p>
+        <div id="centrar">
+            
+            <form id="ganancia">
+                <select name="mercaderia" id="fruta">
+                </select>
+                <input type="number" placeholder="Valor de mercaderia">
+                <input type="number" placeholder="Peso de la mercaderia">
+                <input type="submit" value="Enviar">
+                
+                
+            </form>
+            <h3></h3>
+            <h2></h2>
+            
+            
+        </div>
+        
+        <h1>Ingresar clientes?</h1>
+        <div class="centrar__boton">
+            <button id="fadein">Si</button>
+            <button id="fadeout">Cerrar</button>
+            
+        </div>
+        
+        <form id="listaDeClientes" style="display: none;">
+            
+            
+            <input type="text" placeholder="Nombre">
+            <input type="text" placeholder="Apellido">
+            <input type="text" placeholder="Domicilio">
+            <input type="text" placeholder="Telefono">
+            <input type="submit" value=" Enviar">
+        </form>
+        <h3></h3>
+        <hr>
+        <div class="centrar__boton">
+            
+            <button id="fadein-2">Ver Stock</button>
+            <button id="fadeout-2">Cerrar Stock</button>
+            
+        </div>
+            <div id="listaStock" style="display: none;">
+                
+                <ul id="stock"></ul>
+                
+            </div>
+        <div id="parrafo" ></div>
+        <div class="centrar__boton">
+            <button id="boton" >Si</button>
+        </div>
+        <div id="nombreStock"></div>
+        
+        
+    </article>
+</section>
+
+    <footer>
+
+    </footer>
+</body>
+</html>

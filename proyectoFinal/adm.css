@@ -1,0 +1,81 @@
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    height: 100%;
+    
+}
+header{
+    background-color: black;
+    height: 150px;
+    width: 100%;
+}
+section{
+    height:100%;
+}
+#titulo{
+    display: flex;
+    justify-content:center;
+    color: white;
+    font-size: 50px;
+    
+}
+#listaStock{
+    
+    background-color: rgb(212, 240, 184);
+    border-radius: 8px;
+    border: solid 1px;
+    
+
+}
+
+li{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    
+}
+.centrar__boton{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#myForm{
+    background-color: rgba(0, 128, 0, 0);
+    height: 80px;
+}
+
+h1{
+    font-style: italic;
+    color: rgb(0, 0, 0);
+    font-size: xx-large;
+    }
+h3{
+    font-style: oblique;
+    color: rgb(0, 0, 0);
+}
+#ganancia {
+    display: flex;
+    flex-direction: column;
+}
+button{
+    color: white;
+    background-color: black;
+    border-radius: 8px;
+    height: 35px;
+    width: 60px;
+    margin: 5px;
+
+}
+footer{
+    background-color: black;
+    height: 100px;
+    width: 100%;
+
+}
